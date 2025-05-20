@@ -38,6 +38,12 @@ export function Node({
                 expanded: toggleExpanded(node.id),
               },
             }}
+            scroll={false}
+            role="button"
+            aria-expanded={isExpanded}
+            aria-label={
+              isExpanded ? `Collapse ${node.name}` : `Expand ${node.name}`
+            }
             className="px-2 py-1 bg-gray-300 rounded"
           >
             {isExpanded ? "▼" : "▶"}
@@ -53,6 +59,7 @@ export function Node({
               expanded: expandedIds.join(","),
             },
           }}
+          scroll={false}
           className="px-2 py-1 bg-blue-500 text-white rounded"
         >
           Select
