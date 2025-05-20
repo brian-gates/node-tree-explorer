@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { Node as NodeType } from "~/app/data";
 
@@ -44,12 +43,11 @@ export function Node({
             aria-label={
               isExpanded ? `Collapse ${node.name}` : `Expand ${node.name}`
             }
-            className="px-2 py-1 bg-gray-300 rounded"
+            className="px-2 py-1 rounded bg-blue-500 text-white"
           >
             {isExpanded ? "▼" : "▶"}
           </Link>
         )}
-        <span>{node.id}</span>
         <span>{node.name}</span>
         <Link
           href={{
