@@ -28,10 +28,6 @@ export default async function Home({
             Fully server-rendered: no client state, all navigation is via URL.
           </li>
           <li>Recursive tree structure with arbitrary depth.</li>
-          <li>
-            Selection and expand/collapse state are stateless and encoded in the
-            URL.
-          </li>
           <li>Accessible, keyboard-navigable links for all actions.</li>
           <li>Visual selection indicated by a blue border.</li>
         </ul>
