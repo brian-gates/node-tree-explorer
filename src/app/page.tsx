@@ -4,11 +4,12 @@ import { Node } from "./lib/node";
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { id?: string; expanded?: string };
+  searchParams?: Record<string, string | string[]>;
 }) {
   const data = await fetchData();
-  const selectedId = searchParams.id ?? "";
-  const expandedIds = searchParams.expanded?.split(",").filter(Boolean) ?? [];
+  const selectedId = searchParams?.id?.toString() ?? "";
+  const expandedIds =
+    searchParams?.expanded?.toString().split(",").filter(Boolean) ?? [];
   return (
     <div className="p-4">
       <div className="mb-6 space-y-2">
